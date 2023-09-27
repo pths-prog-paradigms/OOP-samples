@@ -60,7 +60,7 @@ class ArrayIntList {
 
     operator fun set(index: Int, element: Int) {
         if (capacity <= index) {
-            arr = Arrays.copyOf(arr, maxOf(capacity + capacity / 2 + 1, index))
+            arr = Arrays.copyOf(arr, maxOf(capacity + capacity / 2 + 1, index + 1))
             capacity = arr.size
         }
         arr[index] = element
